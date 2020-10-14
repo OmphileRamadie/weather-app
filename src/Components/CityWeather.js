@@ -11,15 +11,13 @@ export default function CityWeather(props) {
     errorMessage,
     iconCode,
     errorFound,
-    sunrise
+    noResults,
   } = props; // Destructuring props
   const icon = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-  
-
   if (cityName && errorFound === false) {
     return (
-      <div className="container bg-light weatherData">
+      <div className="container  weatherData">
         <div className="row">
           <div className="col text-center">
             <p className="cityName"> {cityName} </p>
@@ -30,7 +28,6 @@ export default function CityWeather(props) {
         <div className="row">
           <div className=" col text-center">
             <p className="weatherDescription"> {weatherDescription} </p>
-           
           </div>
         </div>
 
@@ -56,13 +53,11 @@ export default function CityWeather(props) {
     );
   } else if (errorMessage) {
     return (
-      <div className="container bg-light mt-5 mb-3 w-50">
+      <div className="container bg-light noResults">
         <p>{errorMessage}</p>
       </div>
     );
   } else {
-    return "" /*  <div class="spinner-border text-primary" role="status">
-    <span class="sr-only">Loading...</span>
-  </div> */;
+    return "";
   }
 }

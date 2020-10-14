@@ -41,7 +41,6 @@ body {
 }
 
 .weatherIllustration {
-  height: 400px;
   width: 80%;
   height: 80%;
   padding: 30px 30px 30px 60px;
@@ -51,9 +50,10 @@ body {
   margin: auto;
   margin-left: 200px;
   margin-top: 40px;
+  background-color: rgb(238, 238, 238);
 }
 .hero {
-  background-color: rgb(253, 249, 249);
+  background-color: rgb(204, 204, 204);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 26% 100%);
   height: 590px;
 }
@@ -87,6 +87,7 @@ body {
 
 .cityName {
   font-size: 25px;
+  margin-bottom: 0;
 }
 .maxTemp {
   border-right: 1px solid gray;
@@ -96,10 +97,6 @@ body {
 
 .mainTemp {
   font-size: 23px;
-}
-
-.fa-cloud {
-  font-size: 16px;
 }
 
 .fa-search,
@@ -116,4 +113,126 @@ body {
 .searchBtn {
   padding: 8px;
   border-radius: 100px;
+}
+
+.noResults {
+  width: 50%;
+  margin: 50px auto 20px 200px;
+}
+
+@media (max-width: 1150px) {
+  .header {
+    padding: 0 60px;
+  }
+
+  .inputContainer {
+    padding: 0 60px;
+    margin-top: 50px;
+    text-align: left;
+  }
+
+  .inputContainer h1 {
+    font-size: 35px;
+  }
+  .hero {
+    clip-path: none;
+
+    margin: auto;
+  }
+
+  .input {
+    width: 300px;
+
+    margin: auto;
+  }
+
+  .input input {
+    margin-right: 15px;
+  }
+
+  .weatherData {
+    margin: 40px auto;
+    width: 300px;
+    height: 300px;
+  }
+  .weatherIllustration {
+    width: 100%;
+    height: 100%;
+    padding: 0px 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .weatherInfo,
+  .hero {
+    grid-column: 1/3;
+  }
+
+  .hero {
+    order: 2;
+    height: 250px;
+    clip-path: none;
+    width: 90%;
+    margin: auto;
+  }
+
+  .weatherIllustration {
+    padding: 30px 30px 0px 60px;
+  }
+
+  .inputContainer {
+    order: 3;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 0;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  .input {
+    width: 80%;
+    margin: 20px auto 60px 90px;
+  }
+
+  .input input {
+    margin-right: 5px;
+  }
+
+  .header {
+    padding: 0 40px;
+    order: 1;
+    background: none;
+  }
+
+  .weatherInfo {
+    order: 3;
+  }
+
+  .weatherData {
+    margin: 10px auto 40px 85px;
+    width: 70%;
+    background-color: rgb(238, 238, 238);
+  }
+
+  .footer {
+    order: 4;
+  }
+
+  .inputContainer h1 {
+    font-size: 35px;
+    margin: 0 auto 0 90px;
+
+    width: 70%;
+    text-align: center;
+  }
+  .inputContainer p {
+    margin: 0 auto 0 90px;
+
+    width: 70%;
+    text-align: center;
+  }
+
+  .noResults {
+    margin: 0px auto 20px 135px;
+  }
 }
